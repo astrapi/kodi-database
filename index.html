@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-app lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/theme.css" rel="stylesheet">
+    <style type="text/css">
+    ul>li, a{cursor: pointer;}
+    </style>
+    <title>Alle Filme</title>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <div class="container" id="navbar-container">
+    <div class="navbar-header">
+        <a href="http://movies.simpsons.lan" class="navbar-brand">
+            <small>
+                <i class="glyphicon glyphicon-log-out"></i>
+                http://movies.simpsons.lan 
+            </small>
+        </a><!-- /.brand -->
+        
+    </div><!-- /.navbar-header -->
+    </div>
+</div>
+
+<div class="container theme-showcase" role="main">
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Auswertung Filme</h1>
+            </div>
+          </div>
+
+         <div class="list-group">
+            <a href="movies_all.html" class="list-group-item">
+              Alle Filme
+            </a>
+            <a href="movies_duplicate.html" class="list-group-item">
+              Doppelte Filme
+            </a>
+            <a href="files_duplicate.html" class="list-group-item">
+              Doppelte Dateien
+            </a>
+            <a href="movies_not_in_database.html" class="list-group-item">
+              Filme nicht in Datenbank
+            </a>
+            <a href="files_missing.html" class="list-group-item">
+              Fehlende Dateien
+            </a>
+          </div>
+
+        <div class="list-group">
+            <a href="art_all.html" class="list-group-item">
+              Alle Poster und Fanarts
+            </a>
+            <a href="poster_missing.html" class="list-group-item">
+              Fehlende Poster
+            </a>
+						<a href="poster_left.html" class="list-group-item">
+              Überflüssige Poster
+            </a>
+            <a href="poster_online.html" class="list-group-item">
+              Online Poster
+            </a>
+            <a href="fanart_missing.html" class="list-group-item">
+              Fehlende Fanart
+            </a>
+						<a href="fanart_left.html" class="list-group-item">
+              Überflüssige Fanart
+            </a>
+            <a href="fanart_online.html" class="list-group-item">
+              Online Fanart
+            </a>
+          </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Vergleich patty / murphy</h1>
+            </div>
+          </div>
+        <div class="list-group">
+            <a href="host_1_host_2.html" class="list-group-item">
+              patty -> murphy
+            </a>
+            <a href="host_2_host_1.html" class="list-group-item">
+              murphy -> patty
+            </a>
+          </div>
+
+      </div>
+<script src="js/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+         
+    </body>
+</html>
