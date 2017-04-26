@@ -11,7 +11,7 @@ app.filter('startFrom', function() {
     }
 });
 app.controller('customersCrtl', function ($scope, $http, $timeout) {
-    $http.get('ajax/' + getFile + '.php').success(function(data){
+    $http.get(getFile).success(function(data){
         $scope.list = data;
         $scope.currentPage = 1; //current page
         $scope.entryLimit = 50; //max no of items to display in a page
