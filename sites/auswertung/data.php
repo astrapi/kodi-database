@@ -1,9 +1,8 @@
 <?php
-include('../../config.php');
-include('../../db.php');
+include('config.php');
 
-$query="select * from files where strTitle = '-'";
-$result = $mysqli_astrapi->query($query) or die($mysqli_astrapi->error.__LINE__);
+$query="select * from titel_unterschiedlich;";
+$result = $mysqli_astrapi1->query($query) or die($mysqli_astrapi1->error.__LINE__);
 
 $arr = array();
 if($result->num_rows > 0) {
@@ -11,11 +10,9 @@ if($result->num_rows > 0) {
 		$arr[] = $row;	
 	}
 }
-
 # JSON-encode the response
 $json_response = json_encode($arr);
 
 // # Return the response
 echo $json_response;
 ?>
-

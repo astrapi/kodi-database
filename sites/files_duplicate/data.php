@@ -1,8 +1,9 @@
 <?php
 include('../../config.php');
+include('../../db.php');
 
 $query="select count(id) as row_count, id, strFilename, strPath, substring_index(strFilename, '.',1) as strName from files group by substring_index(strFilename, '.',1) having row_count > 1";
-$result = $mysqli_astrapi1->query($query) or die($mysqli_astrapi1->error.__LINE__);
+$result = $mysqli_astrapi->query($query) or die($mysqli_astrapi->error.__LINE__);
 
 $arr = array();
 if($result->num_rows > 0) {

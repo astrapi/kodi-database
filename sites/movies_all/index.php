@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 <?php include('../../config.php'); ?>
+<?php include('../../db.php'); ?>
 <?php include('../../header.php'); ?>
 <body>
 

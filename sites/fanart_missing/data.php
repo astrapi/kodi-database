@@ -1,5 +1,7 @@
 <?php
-include('../includes/config.php');
+include('../../config.php');
+include('../../db.php');
+
 $query="select movie.c00 as strTitle, movie.c22 as strPath, art.url from movie inner join art on movie.idMovie = art.media_id where url = '' and media_type = 'movie' and type = 'fanart'";
 $result = $mysqli_kodi->query($query) or die($mysqli_kodi->error.__LINE__);
 

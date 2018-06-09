@@ -1,8 +1,9 @@
 <?php
 include('../../config.php');
+include('../../db.php');
 
 $query="select * from files order by strTitle";
-$result = $mysqli_astrapi1->query($query) or die($mysqli_astrapi1->error.__LINE__);
+$result = $mysqli_astrapi->query($query) or die($mysqli_astrapi->error.__LINE__);
 
 $arr = array();
 if($result->num_rows > 0) {

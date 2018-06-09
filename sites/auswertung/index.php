@@ -7,10 +7,10 @@
 <?php include('../../nav.php'); ?>
 
 <div ng-controller="customersCrtl">
-<div class="container theme-showcase" role="main">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h1 class="panel-title">murphy -> patty</h1>
+	<div class="container theme-showcase" role="main">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+              <h1 class="panel-title">Alle Filme</h1>
             </div>
           </div>
     <div class="row">
@@ -36,14 +36,14 @@
             <table class="table table-striped table-bordered">
             <thead>
             <th>strFilename&nbsp;<a ng-click="sort_by('strFilename');"><i class="glyphicon glyphicon-sort"></i></a></th>
-						<th>strPath&nbsp;<a ng-click="sort_by('strPath');"><i class="glyphicon glyphicon-sort"></i></a></th>
-						<th>strSize&nbsp;<a ng-click="sort_by('strSize');"><i class="glyphicon glyphicon-sort"></i></a></th>
+						<th>a_c00&nbsp;<a ng-click="sort_by('strTitle');"><i class="glyphicon glyphicon-sort"></i></a></th>
+						<th>b_c00&nbsp;</th>
             </thead>
             <tbody>
                 <tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                     <td>{{data.strFilename}}</td>
-                    <td>{{data.strPath}}</td>
-                    <td>{{data.strSize}}</td>
+                    <td>{{data.a_c00}}</td>
+										<td>{{data.b_c00}}</td>
                 </tr>
             </tbody>
             </table>
@@ -66,10 +66,11 @@
       <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
       </div>
+    
+
 
 <script src="<?php echo $url ?>/js/angular.min.js"></script>
 <script src="<?php echo $url ?>/js/ui-bootstrap-tpls-0.10.0.min.js"></script>
 <script src="<?php echo $url ?>/app/app.js" one="<?php $_SERVER['REQUEST_URI'] ?>data.php"></script>  
 </body>
 </html>
-

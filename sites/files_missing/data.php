@@ -1,5 +1,6 @@
 <?php
 include('../../config.php');
+include('../../db.php');
 
 $query="select substring_index(c22,'/',-1) as strFilename, c00 as strTitle from movie";
 $result = $mysqli_kodi->query($query) or die($mysqli_kodi->error.__LINE__);
@@ -9,7 +10,7 @@ if($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 
 		$query2="select strFilename from files where strFilename = '" . $row['strFilename'] . "';";
-		$result2 = $mysqli_astrapi1->query($query2) or die($mysqli_astrapi1->error.__LINE__);
+		$result2 = $mysqli_astrapi->query($query2) or die($mysqli_astrapi->error.__LINE__);
 
 		if($result2->num_rows == 0) {
 			#while($row2 = $result2->fetch_assoc()) {
